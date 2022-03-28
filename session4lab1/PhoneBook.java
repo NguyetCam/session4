@@ -17,7 +17,7 @@ public class PhoneBook extends Phone{
 
     public void insertPhone(String name, String phone){
         for(contact ct:PhoneList){
-            if(name == ct.name){
+            if(name.equals(ct.name){
                 for(String s:ct.phone){
                     if(s==phone){
                         return;
@@ -41,7 +41,7 @@ public class PhoneBook extends Phone{
 
     public void updatePhone(String name, String newphone){
         for(contact ct:PhoneList){
-            if(name==ct.name){
+            if(name.equals(ct.name){
                 ct.phone.removeAll(ct.phone);
                 ct.phone.add(newphone);
                 System.out.println("Update thành công liên hệ " + ct.name + " số điện thoại: " + ct.phone);
@@ -62,7 +62,7 @@ public class PhoneBook extends Phone{
 
     public void searchPhone(String name){
         for(contact ct:PhoneList){
-            if(name==ct.name){
+            if(name.equals(ct.name){
                 System.out.println("Liên hệ: " + name);
                 System.out.println("Số điện thoại: " + ct.phone);
                 return;
